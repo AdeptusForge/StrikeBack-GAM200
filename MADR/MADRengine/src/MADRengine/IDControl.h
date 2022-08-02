@@ -1,13 +1,17 @@
 #pragma once
 #include "MADRpch.h"
 
-//Defines for the total id sizes for various ID controllers.
+/*!
+Defines for the total id sizes for various ID controllers.
+*/
 #define TOTAL_COMPONENT_ID 16384
 //#define TOTAL_INVENTORY_ID 512
 //#define TOTAL_CAMERA_ID 32
 //#define TOTAL_MAPENTITY_ID 32
 
-//Class for storing, creating, deleting, finding, and recycling old id's
+/*!
+Class for storing, creating, deleting, finding, and recycling old id's
+*/
 class IDController
 {
 private:
@@ -34,32 +38,45 @@ public:
 	unsigned int GetTotalAvailable() { return totalIDsAvailable; }
 	std::vector<unsigned int>* GetRecycledIDs() { return &recycledIDs; }
 
-	//IDController constructor.
-	//Takes in max number of ids for said controller.
+	/*!
+	IDController constructor.
+	Takes in max number of ids for said controller.
+	*/
 	IDController(unsigned int maxIDs) :
 		IDCheck(0), totalIDsAvailable(maxIDs) {};
 
-	//Class that holds ID information and is manipulated and stored 
-	//within an IDController
+	/*!
+	Class that holds ID information and is manipulated and stored 
+	within an IDController
+	*/
 	class MADR_ID
 	{
 	private:
-		//ID
+		/*!
+		ID
+		*/
 		unsigned int id;
-		//Pointer to the code structure the ID is attached to
+		/*!
+		Pointer to the code structure the ID is attached to
+		*/
 		const void* ptr; 
 
 	public:
 		const unsigned int ID() { return id; }
-		//DO NOT USE. USE 'CreateNewID()' UNDER AN 'IDController' INSTEAD.
-		//OTHERWISE, THIS WILL BREAK THE ID SCHEMA.
+		/*!
+		DO NOT USE. USE 'CreateNewID()' UNDER AN 'IDController' INSTEAD.
+		OTHERWISE, THIS WILL BREAK THE ID SCHEMA.
+		*/
+		
 		MADR_ID(unsigned int ID, const void *p) : id(ID), ptr(p) {};
 
 	};
 
 private:
 	std::vector <MADR_ID> allIDs;
-	//Finds an ID via its ID number
+	/*!
+	Finds an ID via its ID number
+	*/
 	struct IDFinder {
 
 		IDFinder(unsigned int const& id) : ID(id) { }
@@ -70,8 +87,11 @@ private:
 
 public:
 	std::vector<MADR_ID>* GetAllIDs() { return &allIDs; }
-	//Creates a pointer to a new ID. Use a positive number to create an ID with a specific number. 
-	//Negative numbers are used for standard generation
+	/*!
+		Creates a pointer to a new ID. Use a positive number to create an ID with a specific number. 
+		Negative numbers are used for standard generation
+	*/
+	
 	MADR_ID* CreateNewID(const void *p, const int setID = -1)
 	{
 		if (allIDs.size() >= totalIDsAvailable)

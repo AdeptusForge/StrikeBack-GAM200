@@ -7,6 +7,7 @@
 #include "IDControl.h"
 #include "Physics.h"
 
+
 class MADREntity : public EventListener
 {
 	MADREntity* parent;

@@ -7,14 +7,21 @@
 
 const int MAX_SAVED_INPUTFRAMES = 20;
 
-//An individual slice of inputs during every 1/120th of a second. Collected after processing.
+/*!
+An individual slice of inputs during every 1/120th of a second. Collected after processing.
+*/
 class InputFrame
 {
 private:
-	//W = up, X = right, Y = down, Z = left
+	/*!
+	W = up, X = right, Y = down, Z = left
+	*/
+	
 	glm::bvec4 cardinalDirections;
 
-	//Buttons correspond to alphabetical order. For example, W = Button 1 and Y = Button 3
+	/*!
+	Buttons correspond to alphabetical order. For example, W = Button 1 and Y = Button 3
+	*/
 	glm::bvec4 buttons;
 
 	glm::bvec4 buttons2;
@@ -51,8 +58,11 @@ enum MouseMode
 	ObjectEditMode
 };
 
-//Essentially designed to handle specific inputs in sequenced input frames (think QCF and DP motions)
-//REFACTOR:: Input macro detection.
+/*!
+Essentially designed to handle specific inputs in sequenced input frames (think QCF and DP motions)
+REFACTOR:: Input macro detection.
+*/
+
 class GestaltInput
 {
 private:
