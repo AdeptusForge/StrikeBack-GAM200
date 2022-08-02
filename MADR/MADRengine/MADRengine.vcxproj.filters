@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MADRengine">
+      <UniqueIdentifier>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MADRengine\Collision.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Components.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\ECS.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\EntryPoint.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Events.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\IDControl.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Input.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\LoadControl.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\MADRpch.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Object.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Render.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Shader.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\TimeKeeping.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MADRengine\Physics.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MADRengine\Collision.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Components.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\ECS.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\EntryPoint.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Events.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\IDControl.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Input.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\MADRpch.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Object.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Render.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\glad.c">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\MADRengine\Physics.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|x64">
+      <Configuration>Distribute</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{47832E27-3351-222D-1CE5-92530852FE91}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ProjectMegaton</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\_bin\Debug-windows-x86_64\ProjectMegaton\</OutDir>
+    <IntDir>..\_bin-int\Debug-windows-x86_64\ProjectMegaton\</IntDir>
+    <TargetName>ProjectMegaton</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\_bin\Release-windows-x86_64\ProjectMegaton\</OutDir>
+    <IntDir>..\_bin-int\Release-windows-x86_64\ProjectMegaton\</IntDir>
+    <TargetName>ProjectMegaton</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\_bin\Distribute-windows-x86_64\ProjectMegaton\</OutDir>
+    <IntDir>..\_bin-int\Distribute-windows-x86_64\ProjectMegaton\</IntDir>
+    <TargetName>ProjectMegaton</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pmpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>MADR_PLATFORM_WINDOWS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;..\MADRengine\src;..\MADRengine\_thirdparty\spdlog\include;..\MADRengine\_thirdparty;..\MADRengine\_thirdparty\includes\imgui-master;..\MADRengine\_thirdparty\includes\glm;..;..\MADRengine\_thirdparty\includes\magic_enum\include;..\MADRengine\_thirdparty\includes\freetype\inc;..\MADRengine\_thirdparty\includes\RTTR\include;..\MADRengine\_thirdparty\includes\stbi\inc;..\MADRengine\_thirdparty\includes\SDL2;..\MADRengine\_thirdparty\includes\GLFW;..\MADRengine\_thirdparty\includes\glad;..\MADRengine\_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/IGNORE:4204,4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pmpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>MADR_PLATFORM_WINDOWS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;..\MADRengine\src;..\MADRengine\_thirdparty\spdlog\include;..\MADRengine\_thirdparty;..\MADRengine\_thirdparty\includes\imgui-master;..\MADRengine\_thirdparty\includes\glm;..;..\MADRengine\_thirdparty\includes\magic_enum\include;..\MADRengine\_thirdparty\includes\freetype\inc;..\MADRengine\_thirdparty\includes\RTTR\include;..\MADRengine\_thirdparty\includes\stbi\inc;..\MADRengine\_thirdparty\includes\SDL2;..\MADRengine\_thirdparty\includes\GLFW;..\MADRengine\_thirdparty\includes\glad;..\MADRengine\_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Ot %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/IGNORE:4204,4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pmpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>MADR_PLATFORM_WINDOWS;MADR_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;..\MADRengine\src;..\MADRengine\_thirdparty\spdlog\include;..\MADRengine\_thirdparty;..\MADRengine\_thirdparty\includes\imgui-master;..\MADRengine\_thirdparty\includes\glm;..;..\MADRengine\_thirdparty\includes\magic_enum\include;..\MADRengine\_thirdparty\includes\freetype\inc;..\MADRengine\_thirdparty\includes\RTTR\include;..\MADRengine\_thirdparty\includes\stbi\inc;..\MADRengine\_thirdparty\includes\SDL2;..\MADRengine\_thirdparty\includes\GLFW;..\MADRengine\_thirdparty\includes\glad;..\MADRengine\_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Ot %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/IGNORE:4204,4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\pmpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ProjectMegaton\main.cpp" />
+    <ClCompile Include="src\pmpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MADRengine\MADRengine.vcxproj">
+      <Project>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

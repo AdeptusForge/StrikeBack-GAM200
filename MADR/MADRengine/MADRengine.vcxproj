@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|x64">
+      <Configuration>Distribute</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F10B25D-2BC8-F3AA-94CF-CC0680A68E9B}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MADRengine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\_bin\Debug-windows-x86_64\MADRengine\</OutDir>
+    <IntDir>..\_bin-int\Debug-windows-x86_64\MADRengine\</IntDir>
+    <TargetName>MADRengine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\_bin\Release-windows-x86_64\MADRengine\</OutDir>
+    <IntDir>..\_bin-int\Release-windows-x86_64\MADRengine\</IntDir>
+    <TargetName>MADRengine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <OutDir>..\_bin\Distribute-windows-x86_64\MADRengine\</OutDir>
+    <IntDir>..\_bin-int\Distribute-windows-x86_64\MADRengine\</IntDir>
+    <TargetName>MADRengine</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\glm;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glfw3_mt.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_ENABLE_ASSERTS;MADR_RELEASE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\glm;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Ot %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glfw3_mt.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;MADR_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;MADR_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;_thirdparty\includes\spdlog\include;_thirdparty\includes\GLFW;_thirdparty\includes\glad;_thirdparty\includes\imgui-master;_thirdparty\includes\glm;_thirdparty\includes\nlohmann;_thirdparty\includes\magic_enum\include;_thirdparty\includes\freetype\inc;_thirdparty\includes\RTTR\include;_thirdparty\includes\stbi\inc;_thirdparty\includes\Boost\inc;_thirdparty\includes\SDL2;_thirdparty\includes\KHR;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Ot %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>glfw3_mt.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MADRengine\Collision.h" />
+    <ClInclude Include="src\MADRengine\Components.h" />
+    <ClInclude Include="src\MADRengine\ECS.h" />
+    <ClInclude Include="src\MADRengine\EntryPoint.h" />
+    <ClInclude Include="src\MADRengine\Events.h" />
+    <ClInclude Include="src\MADRengine\IDControl.h" />
+    <ClInclude Include="src\MADRengine\Input.h" />
+    <ClInclude Include="src\MADRengine\LoadControl.h" />
+    <ClInclude Include="src\MADRengine\MADRpch.h" />
+    <ClInclude Include="src\MADRengine\Object.h" />
+    <ClInclude Include="src\MADRengine\Physics.h" />
+    <ClInclude Include="src\MADRengine\Render.h" />
+    <ClInclude Include="src\MADRengine\Shader.h" />
+    <ClInclude Include="src\MADRengine\TimeKeeping.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MADRengine\Collision.cpp" />
+    <ClCompile Include="src\MADRengine\Components.cpp" />
+    <ClCompile Include="src\MADRengine\ECS.cpp" />
+    <ClCompile Include="src\MADRengine\EntryPoint.cpp" />
+    <ClCompile Include="src\MADRengine\Events.cpp" />
+    <ClCompile Include="src\MADRengine\IDControl.cpp" />
+    <ClCompile Include="src\MADRengine\Input.cpp" />
+    <ClCompile Include="src\MADRengine\MADRpch.cpp" />
+    <ClCompile Include="src\MADRengine\Object.cpp" />
+    <ClCompile Include="src\MADRengine\Physics.cpp" />
+    <ClCompile Include="src\MADRengine\Render.cpp" />
+    <ClCompile Include="src\MADRengine\TimeKeeping.cpp" />
+    <ClCompile Include="src\MADRengine\glad.c" />
+    <ClCompile Include="src\glad.c">
+      <ObjectFileName>$(IntDir)\glad1.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
