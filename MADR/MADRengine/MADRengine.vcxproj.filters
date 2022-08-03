@@ -21,6 +21,9 @@
     <ClInclude Include="src\MADRengine\EntryPoint.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Errors.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\Events.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
@@ -66,6 +69,9 @@
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\EntryPoint.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Errors.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Events.cpp">

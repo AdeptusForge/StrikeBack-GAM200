@@ -148,6 +148,7 @@
     <ClInclude Include="src\MADRengine\Components.h" />
     <ClInclude Include="src\MADRengine\ECS.h" />
     <ClInclude Include="src\MADRengine\EntryPoint.h" />
+    <ClInclude Include="src\MADRengine\Errors.h" />
     <ClInclude Include="src\MADRengine\Events.h" />
     <ClInclude Include="src\MADRengine\IDControl.h" />
     <ClInclude Include="src\MADRengine\Input.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="src\MADRengine\Components.cpp" />
     <ClCompile Include="src\MADRengine\ECS.cpp" />
     <ClCompile Include="src\MADRengine\EntryPoint.cpp" />
+    <ClCompile Include="src\MADRengine\Errors.cpp" />
     <ClCompile Include="src\MADRengine\Events.cpp" />
     <ClCompile Include="src\MADRengine\IDControl.cpp" />
     <ClCompile Include="src\MADRengine\Input.cpp" />

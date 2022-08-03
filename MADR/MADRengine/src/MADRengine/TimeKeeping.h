@@ -10,8 +10,10 @@ void UpdateTime(GLFWwindow*);
 
 //unsigned int SecondsToFrames(float seconds);
 
-//Widely used frame-locked timer. 
-//Timer starts counting from 1 instead of 0, like all clocks.
+/*!
+Widely used frame-locked timer.
+Timer starts counting from 1 instead of 0, like all clocks.
+*/
 class Event_Timer
 {
 private:
@@ -32,7 +34,9 @@ public:
 	{
 	};
 
-	//Stops timer momentarily.
+	/*!
+	Stops timer momentarily.
+	*/
 	void PauseTimer()
 	{
 		if (timerCount < timerDuration)
@@ -40,22 +44,31 @@ public:
 			paused = true;
 		}
 	};
-	//Ends timer but doesn't send timer Event.
+	
+	/*!
+	Ends timer but doesn't send timer Event.
+	*/
 	void StopTimer()
 	{
 		TimerEnd();
 	}
+	
 	void UnpauseTimer()
 	{
 		paused = false;
 	};
-	//Deletes the timer, preventing it from acting or counting further. 
-	//Skips the timer event if not called from TimerCompletion
+	
+	/*!
+		Deletes the timer, preventing it from acting or counting further. 
+		Skips the timer event if not called from TimerCompletion
+	*/
 	void TimerEnd()
 	{
 		
 	}
-	//Sends the completed timer event, and resets the timer if looping.
+	/*!
+		Sends the completed timer event, and resets the timer if looping.
+	*/
 	void TimerCompletion()
 	{
 		//TODO:: SEND TIMER COMPLETED EVENT
@@ -65,6 +78,7 @@ public:
 		else
 			TimerEnd();
 	}
+	
 	void TimerUpdate()
 	{
 		//WriteDebug(timerID + " Updated");

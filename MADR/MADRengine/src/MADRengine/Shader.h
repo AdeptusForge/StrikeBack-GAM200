@@ -12,11 +12,16 @@
 class Shader
 {
 public:
-	// the program ID. Doesn't use the MADR_ID system currently, 
-	// although it potentially could in the future.
+	/*!
+	the program ID. Doesn't use the MADR_ID system currently, 
+	 although it potentially could in the future.
+	*/
+	
 	unsigned int ID;
 
-	// constructor reads and builds the shader
+	/*!
+constructor reads and builds the shader
+	*/ 
 	Shader(const GLchar* vertexPath, const GLchar* fragmentPath)
 	{
 		std::string vertexCode;
@@ -72,12 +77,16 @@ public:
 		glDeleteShader(vertex);
 		glDeleteShader(fragment);
 	}
-	// activate the shader
+	/*!
+		activate the shader
+	*/
 	void use()
 	{
 		glUseProgram(ID);
 	}
-	// utility uniform functions
+	/*!
+	utility uniform functions
+	*/
 	void setBool(const std::string& name, bool value) const
 	{
 		glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
@@ -96,7 +105,9 @@ public:
 	}
 
 private:
-	// utility function for checking shader compilation/linking errors.
+	/*!
+	utility function for checking shader compilation/linking errors.
+	*/ 
 	// ------------------------------------------------------------------------
 	void checkCompileErrors(unsigned int shader, std::string type)
 	{

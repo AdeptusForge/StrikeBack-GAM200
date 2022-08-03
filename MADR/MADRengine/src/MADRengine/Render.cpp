@@ -3,6 +3,11 @@
 GLFWwindow* rWindow;
 #define Background_Color 0.2f, 0.3f, 0.3f, 1.0f
 
+/*!
+ RenderStartup
+	This function initializes the rendering systems.
+	It returns type GLFWwindow**
+*/
 GLFWwindow** RenderStartup()
 {
 	if (glfwInit()) 
@@ -25,6 +30,11 @@ GLFWwindow** RenderStartup()
 	return &rWindow;
 }
 
+/*!
+ RenderStartup
+	This function updates the rendering systems.
+	It returns nothing.
+*/
 void RenderUpdate(GLFWwindow* window)
 {
 

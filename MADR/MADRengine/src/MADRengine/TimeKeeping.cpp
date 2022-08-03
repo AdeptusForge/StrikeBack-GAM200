@@ -5,9 +5,13 @@
 #include "glfw3.h"
 
 
+/*!
+FIXED_UPDATE_RATE	
+	Shows number of ticks since last update, useful for running time-based functions.
+*/
 #define FIXED_UPDATE_RATE 120
 
-//Shows number of ticks since last update, useful for running time-based functions.
+
 Uint64 deltaTime;
 Uint64 startup;
 Uint64 totalTicksSinceStartup;
@@ -19,13 +23,18 @@ int totalRenders = 0;
 
 std::vector<Event_Timer> allTimers;
 
-//Gets the current ticks per frame. Used mostly in timestep testing.
+/*!
+Gets the current ticks per frame. Used mostly in timestep testing.
+*/
 int GetCurrentTick()
 {
 	return (int)(currTick / physicsFrameInTicks);
 };
 
-//Begins time startup.
+/*!
+ Begins time startup.
+*/
+
 void TimeStartup()
 {
 	startup = SDL_GetPerformanceCounter();
@@ -33,7 +42,9 @@ void TimeStartup()
 	priorTick = startup;
 	//WriteDebug(to_string(physicsFrameInTicks));
 };
-
+/*!
+	FixedUpdate - does something.
+*/
 void FixedUpdate(GLFWwindow* window)
 {
 	priorTick = currTick;
@@ -47,7 +58,9 @@ void FixedUpdate(GLFWwindow* window)
 	//PhysicsUpdate();
 	EventManagerUpdate();
 }
-
+/*!
+	VariableUpdate - does something.
+*/
 void VariableUpdate(GLFWwindow* window) 
 {
 	//RenderUpdate(window);
@@ -55,9 +68,11 @@ void VariableUpdate(GLFWwindow* window)
 	//UpdateMap();
 }
 
+/*!
+	Updates game time based on the computer's clock and the current tick.
+	Updates Rendering, Physics, Inputs, and map interactions.
+*/
 
-//Updates game time based on the computer's clock and the current tick. 
-//Updates Rendering, Physics, Inputs, and map interactions.
 void UpdateTime(GLFWwindow* window)
 {
 	currTick = SDL_GetPerformanceCounter();
@@ -67,3 +82,4 @@ void UpdateTime(GLFWwindow* window)
 
 	VariableUpdate(window);
 }
+
