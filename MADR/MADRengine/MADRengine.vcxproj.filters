@@ -6,6 +6,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\MADRengine\Audio.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\Collision.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
@@ -36,6 +39,9 @@
     <ClInclude Include="src\MADRengine\Object.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Physics.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\Render.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
@@ -45,11 +51,11 @@
     <ClInclude Include="src\MADRengine\TimeKeeping.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
-    <ClInclude Include="src\MADRengine\Physics.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\MADRengine\Audio.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\Collision.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
@@ -77,6 +83,9 @@
     <ClCompile Include="src\MADRengine\Object.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
+    <ClCompile Include="src\MADRengine\Physics.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\Render.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
@@ -87,8 +96,5 @@
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\MADRengine\Physics.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

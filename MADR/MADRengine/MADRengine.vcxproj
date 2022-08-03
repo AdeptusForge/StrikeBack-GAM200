@@ -143,6 +143,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\MADRengine\Audio.h" />
     <ClInclude Include="src\MADRengine\Collision.h" />
     <ClInclude Include="src\MADRengine\Components.h" />
     <ClInclude Include="src\MADRengine\ECS.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="src\MADRengine\TimeKeeping.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\MADRengine\Audio.cpp" />
     <ClCompile Include="src\MADRengine\Collision.cpp" />
     <ClCompile Include="src\MADRengine\Components.cpp" />
     <ClCompile Include="src\MADRengine\ECS.cpp" />
