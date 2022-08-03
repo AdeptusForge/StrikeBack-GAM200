@@ -18,6 +18,9 @@
     <ClInclude Include="src\MADRengine\EntryPoint.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Errors.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\Events.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
@@ -36,6 +39,9 @@
     <ClInclude Include="src\MADRengine\Object.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MADRengine\Physics.h">
+      <Filter>MADRengine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MADRengine\Render.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
@@ -43,9 +49,6 @@
       <Filter>MADRengine</Filter>
     </ClInclude>
     <ClInclude Include="src\MADRengine\TimeKeeping.h">
-      <Filter>MADRengine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MADRengine\Physics.h">
       <Filter>MADRengine</Filter>
     </ClInclude>
   </ItemGroup>
@@ -60,6 +63,9 @@
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\EntryPoint.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MADRengine\Errors.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\MADRengine\Events.cpp">
@@ -77,6 +83,9 @@
     <ClCompile Include="src\MADRengine\Object.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
+    <ClCompile Include="src\MADRengine\Physics.cpp">
+      <Filter>MADRengine</Filter>
+    </ClCompile>
     <ClCompile Include="src\MADRengine\Render.cpp">
       <Filter>MADRengine</Filter>
     </ClCompile>
@@ -87,8 +96,5 @@
       <Filter>MADRengine</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\MADRengine\Physics.cpp">
-      <Filter>MADRengine</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

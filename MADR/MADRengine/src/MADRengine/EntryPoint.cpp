@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Collision.h"
 #include "Render.h"
+#include "Errors.h"
 
 Collider c;
 GLFWwindow** window;
@@ -231,5 +232,10 @@ void CentralLoop()
 		{
 			UpdateTime(*window);
 			RenderUpdate(*window);
+			
+			ERROR(UNHANDLED,"MACRO IS WORKING");
+
 		}
+	
+	
 }

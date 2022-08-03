@@ -82,3 +82,4 @@ void UpdateTime(GLFWwindow* window)
 
 	VariableUpdate(window);
 }
+
